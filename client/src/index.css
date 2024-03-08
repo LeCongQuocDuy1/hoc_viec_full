@@ -1,0 +1,255 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+::selection {
+    background-color: #f05123;
+    color: #fff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 14px; /* width of the entire scrollbar */
+}
+::-webkit-scrollbar-track {
+    background: #fff; /* color of the tracking area */
+}
+::-webkit-scrollbar-thumb {
+    background-color: #e6e6e6; /* color of the scroll thumb */
+    border-radius: 16px; /* roundness of the scroll thumb */
+    border: 4px solid #fff; /* creates padding around scroll thumb */
+}
+
+#form::-webkit-scrollbar {
+    width: 14px; /* width of the entire scrollbar */
+    border-radius: 16px;
+}
+#form::-webkit-scrollbar-track {
+    background: #fff; /* color of the tracking area */
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px; /* roundness of the scroll thumb */
+}
+#form::-webkit-scrollbar-thumb {
+    background-color: #d3d3d3; /* color of the scroll thumb */
+    border-radius: 16px;
+}
+
+input,
+button {
+    outline: none;
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+
+img {
+    width: 100%;
+}
+
+.one-line {
+    display: block;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.third-line {
+    display: block;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.password-bar > div > div {
+    height: 5px !important;
+    border-radius: 16px;
+}
+
+.password-bar > div {
+    margin: 0px !important;
+}
+
+.slick-arrow {
+    border-radius: 100%;
+    z-index: 2;
+    padding: 7px;
+    height: 30px;
+    width: 30px;
+    background-color: #fff;
+    color: #444;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.slick-arrow:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.slick-prev {
+    left: -16px;
+}
+
+.slick-next {
+    right: -16px;
+}
+
+.slick-arrow.slick-next:before {
+    content: "";
+}
+
+.slick-arrow.slick-prev:before {
+    content: "";
+}
+
+.slick-list {
+    border-radius: 16px;
+}
+
+.slick-dots {
+    bottom: -35px;
+    text-align: left;
+    margin-left: 30px;
+}
+
+.slick-dots li:not(:last-child) {
+    margin-right: 30px;
+}
+
+.slick-dots li button:before {
+    width: 40px;
+    height: 8px;
+    border-radius: 16px;
+    content: "";
+    background-color: #000;
+    transition: all 0.4s linear;
+}
+
+.slick-dots li.slick-active button:before {
+    width: 46px;
+}
+
+.theme-1 {
+    background: linear-gradient(to right, rgb(40, 119, 250), rgb(103, 23, 205));
+}
+
+.theme-2 {
+    background: linear-gradient(
+        to right,
+        rgb(104, 40, 250),
+        rgb(255, 186, 164)
+    );
+}
+
+.theme-3 {
+    background: linear-gradient(to right, rgb(136, 40, 250), rgb(89, 169, 250));
+}
+
+.theme-4 {
+    background: linear-gradient(to right, rgb(253, 34, 92), rgb(253, 144, 4));
+}
+
+.theme-5 {
+    background: linear-gradient(to right, rgb(0, 126, 254), rgb(6, 195, 254));
+}
+
+.theme-6 {
+    background: linear-gradient(to right, rgb(254, 33, 94), rgb(255, 148, 2));
+}
+
+.theme-7 {
+    background: linear-gradient(to right, rgb(118, 18, 255), rgb(5, 178, 255));
+}
+
+/* Responsive */
+
+/* Tablet: width >= 740px and width < 1024px */
+@media (min-width: 740px) and (max-width: 1024px) {
+    html {
+        font-size: 80%;
+    }
+}
+
+/* Mobile: width < 740px */
+@media (max-width: 740px) {
+    html {
+        font-size: 70%;
+    }
+}
+
+/* Mobile: width < 640px */
+@media (max-width: 640px) {
+    .slick-dots li button:before {
+        width: 30px;
+        height: 6px;
+    }
+
+    .slick-dots li:not(:last-child) {
+        margin-right: 20px;
+    }
+
+    .slick-dots li.slick-active button:before {
+        width: 36px;
+    }
+}
+
+/* Mobile: width < 500px */
+@media (max-width: 500px) {
+    .slick-arrow {
+        display: none !important;
+    }
+
+    .slick-dots {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .slick-dots li button:before {
+        width: 10px;
+        height: 10px;
+    }
+
+    .slick-dots li:not(:last-child) {
+        margin-right: 4px;
+    }
+
+    .slick-dots li.slick-active button:before {
+        width: 10px;
+    }
+}
+
+/*
+PC: width >= 1024px
+@media (min-width: 1100px) {
+}
+
+Tablet: width >= 740px and width < 1024px
+@media (min-width: 740px) and (max-width: 1024px) {
+    html {
+        font-size: 60%;
+    }
+}
+
+Mobile: width < 740px
+@media (max-width: 740px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+Mobile: width < 340px
+@media (max-width: 340px) {
+}
+*/
